@@ -1,0 +1,70 @@
+  /* Define Color Palette as CSS Variables */
+:root {
+  --cr-purple: #9E74B3;
+  --cr-orange: #ED902F;
+  --cr-blue: #2871B9;
+  --cr-green: #1CA35D;
+  --cr-dark-text: #212529; 
+}
+
+/* Custom Logo Styling */
+.navbar-brand img {
+  max-height: 40px; 
+  width: auto;
+}
+
+/* Updated Primary Button using CSS Variable */
+.btn-craniorate-primary {
+  background-color: var(--cr-blue);
+  border-color: var(--cr-blue);
+  color: #ffffff;
+}
+
+.btn-craniorate-primary:hover {
+  /* We can generate a slightly darker shade for the hover state */
+  background-color: #1F5A9A; /* Darker shade of #2871B9 */
+  border-color: #1D548F;
+  color: #ffffff;
+}
+
+/* Example classes for future icon features */
+.text-purple { color: var(--cr-purple); }
+.text-orange { color: var(--cr-orange); }
+.text-green { color: var(--cr-green); }
+.text-blue { color: var(--cr-blue); }
+
+/* Consistent Card Styling */
+.card {
+  border: 1px solid #dee2e6; /* A subtle border */
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* A slight lift on hover */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* A soft shadow on hover */
+}
+
+.icon-circle {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-blue {
+  background-color: var(--cr-blue);
+}
+
+.bg-green {
+  background-color: var(--cr-green);
+}
+
+.bg-orange {
+  background-color: var(--cr-orange);
+}
+
+.bg-purple {
+  background-color: var(--cr-purple);
+}

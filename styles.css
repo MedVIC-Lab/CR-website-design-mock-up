@@ -68,3 +68,80 @@
 .bg-purple {
   background-color: var(--cr-purple);
 }
+
+.logo-features-grid {
+  /* This class now only serves as a marker, the Bootstrap row handles the layout. 
+     We remove the fixed width and height. */
+  margin: 0 auto;
+}
+
+.quadrant {
+  /* We remove the fixed min-height and use aspect-ratio instead */
+  aspect-ratio: 1 / 1; /* This makes the element a perfect square */
+  padding: 30px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* Mask properties */
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  
+  transition: transform 0.3s ease;
+}
+
+.quadrant:hover {
+  transform: scale(1.03);
+  z-index: 10;
+}
+
+/* Apply the specific shape and color to each quadrant */
+.quadrant-objective {
+  mask-image: url('logo-top-left.svg');
+  background-color: var(--cr-purple);
+}
+
+.quadrant-holistic {
+  mask-image: url('logo-top-right.svg');
+  background-color: var(--cr-orange);
+}
+
+.quadrant-easy-to-use {
+  mask-image: url('logo-bottom-left.svg');
+  background-color: var(--cr-green);
+}
+
+.quadrant-clinically-relevant {
+  mask-image: url('logo-bottom-right.svg');
+  background-color: var(--cr-blue);
+}
+
+.quadrant h5 {
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.quadrant p {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* --- RESPONSIVE FIXES --- */
+
+/* This media query targets screens MEDIUM and LARGER (desktops) */
+@media (min-width: 768px) {
+  .logo-features-grid {
+    /* We can set a max-width on desktop to keep the logo from getting too large */
+    max-width: 600px; 
+  }
+
+  .quadrant-easy-to-use,
+  .quadrant-clinically-relevant {
+    /* Apply the negative margin ONLY on desktop to create the seamless logo effect */
+    margin-top: -50px; 
+    min-height: 300px;
+    min-width: 300px;
+  }
+}
